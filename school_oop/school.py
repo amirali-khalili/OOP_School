@@ -14,7 +14,9 @@ class SQLiteDB(IDatabase):
         self.path = path
 
     def get_connection(self):
-        return sqlite3.connect(self.path)
+        conn = sqlite3.connect(self.path)
+        conn.execute("PRAGMA foreign_keys = ON;")
+        return conn
 
 
 class Person(ABC):

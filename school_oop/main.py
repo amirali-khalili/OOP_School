@@ -93,21 +93,21 @@ while True:
         name = input("Student name: ")
         age = int(input("Student age: "))
         student = Student(name, age)
-        student_id = student_repo.save(student)
-        print(f"{name} added with ID {student_id}")
+        student_repo.save(student)
+        print(f"Student {name} added ")
 
     elif choice == "2":
         name = input("Teacher name: ")
         age = int(input("Teacher age: "))
         teacher = Teacher(name, age)
-        teacher_id = teacher_repo.save(teacher)
-        print(f"{name} added with ID {teacher_id}")
+        teacher_repo.save(teacher)
+        print(f"Teacher {name} added ")
 
     elif choice == "3":
         name = input("Course name: ")
         course = Course(name)
-        course_id = course_repo.save(course)
-        print(f"{name} added with ID {course_id}")
+        course_repo.save(course)
+        print(f"{name} added ")
 
     elif choice == "4":
         teachers = list_teachers()
@@ -156,8 +156,8 @@ while True:
         teachers = list_teachers()
         tid = int(input("Select Teacher ID: "))
         car = Car(name, tid)
-        car_id = car_repo.save(car)
-        print(f"Car {name} added for Teacher ID {tid} with Car ID {car_id}")
+        car_repo.save(car)
+        print(f"Car {name} added for Teacher ID {tid} ")
 
     elif choice == "12":
         list_cars()
